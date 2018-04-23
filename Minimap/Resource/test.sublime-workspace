@@ -1,0 +1,448 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mar",
+				"markers"
+			],
+			[
+				"cont",
+				"contentString"
+			],
+			[
+				"co",
+				"Content"
+			],
+			[
+				"c",
+				"class"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"bL",
+				"bClass"
+			],
+			[
+				"li",
+				"line-height"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"al",
+				"align-items"
+			],
+			[
+				"fla",
+				"float-right"
+			],
+			[
+				"col",
+				"col-md-3"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"MAR",
+				"margin"
+			],
+			[
+				"HO",
+				"HomePage"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"FONT",
+				"font-size"
+			],
+			[
+				"margi",
+				"margin-left"
+			],
+			[
+				"f",
+				"float"
+			],
+			[
+				"inl",
+				"inline"
+			],
+			[
+				"hhe",
+				"height"
+			],
+			[
+				"fi",
+				"filter"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"s",
+				"style\tAttr"
+			],
+			[
+				"text-",
+				"text-anchor"
+			],
+			[
+				"alin",
+				"align-items"
+			],
+			[
+				"poi",
+				"position"
+			],
+			[
+				"src",
+				"srch"
+			],
+			[
+				"inpu",
+				"input-group-btn"
+			],
+			[
+				"b",
+				"bClass"
+			],
+			[
+				"bla",
+				"bClass"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"lis",
+				"list-style"
+			],
+			[
+				"h",
+				"hidden"
+			],
+			[
+				"tes",
+				"text-decoration-style"
+			],
+			[
+				"bC",
+				"bClass"
+			],
+			[
+				"bl",
+				"bClass"
+			],
+			[
+				"whi",
+				"width"
+			],
+			[
+				"ds",
+				"display"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"cus",
+				"cusTd2"
+			],
+			[
+				"borde",
+				"border"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"latl",
+				"latlng"
+			],
+			[
+				"gool",
+				"Google"
+			],
+			[
+				"ma",
+				"maps"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 412.0
+	},
+	"console":
+	{
+		"height": 185.0,
+		"history":
+		[
+			"install package"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/minimap/minimap/css/main.css",
+		"/D/minimap/minimap/AddMarker.php",
+		"/D/minimap/minimap/Profile.php",
+		"/D/minimap/minimap/header.php",
+		"/C/xampp/htdocs/minimap/css/main.css",
+		"/C/xampp/htdocs/minimap/AddMarker.php",
+		"/C/xampp/htdocs/test/css/custom.css",
+		"/C/xampp/htdocs/test/AddMarker.php",
+		"/C/xampp/htdocs/minimap/123.php",
+		"/C/xampp/htdocs/minimap/ExploreChannel.php",
+		"/C/xampp/htdocs/minimap/Profile.php",
+		"/C/xampp/htdocs/minimap/login.php",
+		"/C/xampp/htdocs/minimap/MySubscribes.php",
+		"/C/xampp/htdocs/minimap/CreateChannel.php",
+		"/C/xampp/htdocs/minimap/ExpChnInfo.php",
+		"/C/xampp/htdocs/minimap/HomePage.php",
+		"/C/xampp/htdocs/minimap/MyChannel.php",
+		"/C/xampp/htdocs/minimap/MyChnInfo.php",
+		"/C/xampp/htdocs/minimap/MyChannelInfo.php",
+		"/C/xampp/htdocs/demo/MySubscribe.php",
+		"/C/xampp/htdocs/demo/HomePage.php",
+		"/D/STUDY/Atp 2/demo/OutChannelDetails 2.php",
+		"/C/xampp/htdocs/demo/Profile.php",
+		"/C/xampp/htdocs/demo/MyChannelSubscribed.php",
+		"/C/xampp/htdocs/demo/map.php",
+		"/C/xampp/htdocs/demo/OutChannelDetails2.php",
+		"/D/STUDY/Atp 2/demo/ChannelInfo.php",
+		"/D/STUDY/Atp 2/demo/OutChannelDetails.php",
+		"/D/STUDY/Atp 2/demo/css/main.css",
+		"/D/STUDY/Atp 2/demo/CreateChannel.php",
+		"/D/STUDY/Atp 2/demo/ExploreChannel.php",
+		"/D/STUDY/Atp 2/demo/MyChannel.php",
+		"/D/STUDY/Atp 2/demo/HPage.php",
+		"/D/STUDY/Atp 2/demo/AddMarker.php",
+		"/D/STUDY/Atp 2/demoSample/HPage.php",
+		"/D/STUDY/Atp 2/demo/backup/HPage - Copy.php",
+		"/D/STUDY/Atp 2/demo/backup/css/main.css",
+		"/D/STUDY/Atp 2/test/css/test.css",
+		"/D/STUDY/Atp 2/test/test.php",
+		"/D/STUDY/Atp 2/demo/backup/HPage.php",
+		"/D/STUDY/Atp 2/demo/HomePage.php",
+		"/D/STUDY/Atp 2/demo/drop.php",
+		"/D/STUDY/Atp 2/demo/map.php",
+		"/D/STUDY/Atp 2/demo/new.php",
+		"/D/STUDY/Atp 2/demo/test.php",
+		"/D/STUDY/Atp 2/test/css/main.css",
+		"/D/STUDY/Atp 2/demo/js/popper.min.js",
+		"/D/STUDY/Atp 2/demo/HPage.html",
+		"/D/STUDY/Atp 2/demo/EditProfile.php",
+		"/D/STUDY/Atp 2/demo/Profile.php",
+		"/D/STUDY/Atp 2/demo/login.php",
+		"/D/STUDY/Atp 2/Dipu/demo/HomePage.php",
+		"/C/Users/arefin/Downloads/homepage.php",
+		"/D/STUDY/Atp 2/new.php",
+		"/C/xampp/htdocs/new2.php",
+		"/C/xampp/htdocs/new.php",
+		"/D/STUDY/Atp 2/master.txt",
+		"/D/STUDY/Atp 2/git.txt",
+		"/D/STUDY/Atp 2/gitForAtp.txt"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 113.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 47.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "test.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 223.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
