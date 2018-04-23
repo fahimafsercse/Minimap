@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Minimap.Entity.IServices
 {
-    public class IChannelService
+    public interface IChannelService
     {
          int CreateChannel(Channel channel);
          int DeleteChannel(Channel channel);

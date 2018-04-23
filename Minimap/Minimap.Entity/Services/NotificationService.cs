@@ -12,5 +12,21 @@ namespace Minimap.Entity.Models
         {
             return 1;
         }
+        public int DeleteNotification(Notification notification)
+        {
+            return 1;
+        }
+        public int EditNotification(Notification notification)
+        {
+            return 1;
+        }
+        public int GetNotificationNumber()
+        {
+            return 1;
+        }
+        public List<Notification> GetAllNotifications()
+        {
+            return;
+        }
     }
 }

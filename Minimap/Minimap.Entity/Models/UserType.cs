@@ -7,8 +7,14 @@ namespace Minimap.Entity.Models
 {
     public class UserType
     {
-        readonly string UserTypeId { get; set; }
-        string userTypeName;
+
+
+        public string UserTypeId { get { return this.UserTypeId; } }
+        public string UserTypeName { set { this.UserTypeName = value; } get { return this.UserTypeName; } }
+        
+        
+        /*readonly string UserTypeId;//{ get; set; }
+        string UserTypeName { get; set; }
 
         public UserType()
         {
@@ -24,9 +30,8 @@ namespace Minimap.Entity.Models
             this.UserTypeId = userTypeId;
             this.userTypeName = userTypeName;
         }
-
+        */
         //Public Properties
-        public string UserTypeId { get { return this.UserTypeId; } }
-        public string UserTypeName { set { this.userTypeName = value; } get { return this.userTypeName; } }
+
     }
 }

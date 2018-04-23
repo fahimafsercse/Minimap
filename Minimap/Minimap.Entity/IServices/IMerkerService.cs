@@ -6,12 +6,13 @@ using System.Web;
 
 namespace Minimap.Entity.IServices
 {
-    public class IMarkerService
+    public interface IMarkerService
     {
         int AddMarker(Marker marker);
         int RemoveMarker(Marker marker);
         int EditMarker(Marker marker);
-         List<Marker> GetAllMarker();
+         List<Marker> GetAllMarkers();
+        List<Marker> GetMyMarkers();
     }
 }
 

@@ -97,7 +97,22 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="IServices\IAccountDetailService.cs" />
+    <Compile Include="IServices\IChannelService.cs" />
+    <Compile Include="IServices\IMerkerService.cs" />
+    <Compile Include="IServices\INotificationService.cs" />
+    <Compile Include="IServices\IUserTypeService.cs" />
+    <Compile Include="Models\AccountDetail.cs" />
+    <Compile Include="Models\Channel.cs" />
+    <Compile Include="Models\Marker.cs" />
+    <Compile Include="Models\UserType.cs" />
+    <Compile Include="Services\AccountDetailService.cs" />
+    <Compile Include="Services\ChannelService.cs" />
+    <Compile Include="Services\MarkerService.cs" />
+    <Compile Include="Models\Notification.cs" />
+    <Compile Include="Services\NotificationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\UserTypeService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -112,7 +127,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

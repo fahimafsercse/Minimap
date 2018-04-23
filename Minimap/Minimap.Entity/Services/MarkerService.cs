@@ -20,9 +20,13 @@ namespace Minimap.Entity.Models
         {
             return 1;
         }
-        public List<Marker> GetAllMarker()
+        public List<Marker> GetAllMarkers()
         {
             return ;
+        }
+        public List<Marker> GetMyMarkers()
+        {
+            return;
         }
     }
 }
