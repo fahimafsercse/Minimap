@@ -1,12 +1,13 @@
-﻿using Minimap.Entity.Models;
+﻿using Minimap.Core.Entities;
+using Minimap.Core.Service.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Minimap.Entity.Services
+namespace Minimap.Core.Service
 {
-    public class UserTypeService
+    public class UserTypeService: IUserTypeService
     {
         /*//private static UserTypeDataAccess userTypeDataAccess = null;
 
@@ -36,7 +37,7 @@ namespace Minimap.Entity.Services
 
         public int Remove(string id)
         {
-           // return UserTypeService.userTypeDataAccess.Remove(id);
+            // return UserTypeService.userTypeDataAccess.Remove(id);
         }
     }
 }

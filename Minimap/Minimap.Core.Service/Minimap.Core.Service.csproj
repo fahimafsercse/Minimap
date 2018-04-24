@@ -8,12 +8,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{98AA4E88-671B-4E57-8A84-919998E03658}</ProjectGuid>
+    <ProjectGuid>{A045AE44-DED0-44B8-8C90-86BE3D8FD2C6}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Minimap.Infrastructure</RootNamespace>
-    <AssemblyName>Minimap.Infrastructure</AssemblyName>
+    <RootNamespace>Minimap.Core.Service</RootNamespace>
+    <AssemblyName>Minimap.Core.Service</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -84,13 +84,21 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MinimapDBContext.cs" />
+    <Compile Include="ChannelService.cs" />
+    <Compile Include="UserTypeService.cs" />
+    <Compile Include="NotificationService.cs" />
+    <Compile Include="MarkerService.cs" />
+    <Compile Include="AccountDetailService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Minimap.Core.Entities\Minimap.Core.Entities.csproj">
       <Project>{6ac6a66b-9d71-4814-962b-9a3ff3fe22ac}</Project>
       <Name>Minimap.Core.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Minimap.Core.Interfaces\Minimap.Core.Service.Interfaces.csproj">
+      <Project>{00a66c54-703e-42d0-8ccf-d0569ca0992f}</Project>
+      <Name>Minimap.Core.Service.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
@@ -106,9 +114,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>51589</DevelopmentServerPort>
+          <DevelopmentServerPort>51518</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50995/</IISUrl>
+          <IISUrl>http://localhost:51518/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -124,9 +132,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
-    <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets'))" />
   </Target>
-  <Import Project="..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

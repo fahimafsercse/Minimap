@@ -1,16 +1,15 @@
-﻿using Minimap.Entity.IServices;
+﻿using Minimap.Core.Entities;
+using Minimap.Core.Service.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Minimap.Entity.Models
+namespace Minimap.Core.Service
 {
     public class MarkerService: IMarkerService
     {
-        
-
-        public int AddMarkers(List<Marker> markerList)
+        public int AddMarkerList(List<Marker> markerList)
         {
             return 1;
         }
@@ -24,7 +23,7 @@ namespace Minimap.Entity.Models
         }
         public List<Marker> GetAllMarkers()
         {
-            return ;
+            return;
         }
         public List<Marker> GetMyMarkers()
         {

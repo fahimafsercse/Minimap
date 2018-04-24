@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Minimap.Infrastructure")]
+[assembly: AssemblyTitle("Minimap.Core.Service")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Minimap.Infrastructure")]
+[assembly: AssemblyProduct("Minimap.Core.Service")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("98aa4e88-671b-4e57-8a84-919998e03658")]
+[assembly: Guid("a045ae44-ded0-44b8-8c90-86be3d8fd2c6")]
 
 // Version information for an assembly consists of the following four values:
 //
