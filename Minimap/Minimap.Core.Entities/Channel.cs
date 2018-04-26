@@ -8,8 +8,9 @@ namespace Minimap.Core.Entities
     public class Channel
     {
         public string   ChannelOwner { get; set; }
-
+        public Marker ChannelMarkers { get; set; }
         public string ChannelName { get; set; }
+        public int ChannelId { get; set; }
         public string ChannelDescription { get; set; }
 
         public DateTime CreationDate { get; set; }

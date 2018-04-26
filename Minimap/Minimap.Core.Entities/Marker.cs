@@ -11,6 +11,7 @@ namespace Minimap.Core.Entities
         public string Location { get; set; }
         public double Lat { get; set; }
         public double longi { get; set; }
+        public int MarkerId { get; set; }
         public DateTime CreationDate { get; set; }
 
         public int TotalUser { get; set; }

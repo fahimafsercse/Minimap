@@ -21,6 +21,13 @@ namespace Minimap.Core.Service
 
         public int DeleteChannel(Channel channel)
         {
+            
+            return 1;
+        }
+
+        public int DeleteChannelMarkers(Channel channel)
+        {
+            
             return 1;
         }
 

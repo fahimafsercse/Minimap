@@ -1,5 +1,6 @@
 ﻿using Minimap.Core.Entities;
 using Minimap.Core.Service;
+using Minimap.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,28 +11,40 @@ namespace Minimap.Web.Mvc.Controllers
 {
     public class HomeController : Controller
     {
-        AccountDetailService accountDetailService= new AccountDetailService();
-        AccountDetail accountDetail = new AccountDetail();
+        AccountDetailService accountDetailService;
+        AccountDetail accountDetail;
+       
+        public HomeController()
+        {
+            accountDetailService = new AccountDetailService();
+            accountDetail = new AccountDetail();
+        }
         
         // GET: Home
         public ActionResult Index()
         {
-            DateTime date1 = new DateTime(2010, 8, 18);
+            DateTime date = new DateTime();
+            date = DateTime.Now;
 
-
-            accountDetail.Username = "afser02";
+            accountDetail.Username = "finalG";
             accountDetail.FirstName = "a";
             accountDetail.LastName = "afserA";
-            accountDetail.Email = "afserA@gmail.com";
+            accountDetail.Email = "fahimh02@gmail.com";
+            accountDetail.UserTypeId = "client";
+            accountDetail.Gender = "Male";
+            accountDetail.JoinDate = date;
+            accountDetail.MobileNo = "01620171819";
             accountDetail.TotalChaneel = 20;
             accountDetail.TotalMarker = 50;
             accountDetail.TotalSubscription = 10;
-            accountDetail.UserTypeId = "client";
-            
-            accountDetail.JoinDate = date1;
-            accountDetail.MobileNo = "01620171819";
-            accountDetailService.Add(accountDetail);
+
+            //accountDetailService.AddAccount(accountDetail);
+            accountDetailService.DeleteAccount("finalG");
+           
+
             return View();
         }
+
+
     }
 }

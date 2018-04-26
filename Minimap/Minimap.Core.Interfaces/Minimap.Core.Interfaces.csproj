@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IAccountDetailService.cs" />
+    <Compile Include="IAdminService.cs" />
     <Compile Include="IChannelService.cs" />
     <Compile Include="ICurrentLocation.cs" />
     <Compile Include="IMarkerService.cs" />

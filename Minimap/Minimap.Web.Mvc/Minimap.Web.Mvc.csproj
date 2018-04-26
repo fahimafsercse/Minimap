@@ -130,6 +130,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -142,16 +143,23 @@
     <Folder Include="Models\" />
     <Folder Include="Views\Admin\" />
     <Folder Include="Views\Client\" />
-    <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Minimap.Core.Entities\Minimap.Core.Entities.csproj">
       <Project>{6ac6a66b-9d71-4814-962b-9a3ff3fe22ac}</Project>
       <Name>Minimap.Core.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Minimap.Core.Interfaces\Minimap.Core.Interfaces.csproj">
+      <Project>{00a66c54-703e-42d0-8ccf-d0569ca0992f}</Project>
+      <Name>Minimap.Core.Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Minimap.Core.Service\Minimap.Core.Service.csproj">
       <Project>{a045ae44-ded0-44b8-8c90-86be3d8fd2c6}</Project>
       <Name>Minimap.Core.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Minimap.Infrastructure\Minimap.Infrastructure.csproj">
+      <Project>{724e17e5-680e-495e-b18b-a86d17613c95}</Project>
+      <Name>Minimap.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

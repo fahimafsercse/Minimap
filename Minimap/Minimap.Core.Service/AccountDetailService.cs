@@ -3,6 +3,7 @@ using Minimap.Core.Interfaces;
 using Minimap.Infrastructure;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
@@ -10,18 +11,22 @@ namespace Minimap.Core.Service
 {
     public class AccountDetailService: IAccountDetailService
     {
-        
-        public int Add(AccountDetail accountDetail)
+
+        public int AddAccount(AccountDetail accountDetail)
         {
-            string query = string.Format("INSERT INTO AccountDetail(UserName, Firstname, Lastname, Email, Gender, Usertype,Joindate,Totalmarker,Totalchannel,TotalSubscription) VALUES('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', {6}, '{7}','{8}','{9}')", 
-                accountDetail.Username, accountDetail.FirstName, accountDetail.LastName, accountDetail.Email, accountDetail.Gender, accountDetail.UserTypeId, accountDetail.JoinDate, accountDetail.TotalMarker, accountDetail.TotalChaneel, accountDetail.TotalSubscription);
+            string query = string.Format("Insert into AccountDetail(Username,Firstname,Lastname,Email,Gender,Usertype,Joindate,Totalmarker,Totalchannel,Totalsubscription,Mobileno) VALUES('{0}', '{1}', '{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}')", 
+                accountDetail.Username,accountDetail.FirstName,accountDetail.LastName,accountDetail.Email,accountDetail.Gender,accountDetail.UserTypeId,accountDetail.JoinDate,
+                accountDetail.TotalMarker,accountDetail.TotalChaneel,accountDetail.TotalSubscription,accountDetail.MobileNo);
+             return DataAccess.ExecuteQuery(query);
+        }
+
+        public int DeleteAccount(string username)
+        {
+            string query = string.Format("DELETE FROM AccountDetail WHERE Username ='{0}'",username);
             return DataAccess.ExecuteQuery(query);
+            
         }
-        /*public int Delete(string id)
-        {
-            return 1;
-        }
-        public int Edit(AccountDetail accountDetail)
+        /*public int Edit(AccountDetail accountDetail)
         {
             return 1;
         }

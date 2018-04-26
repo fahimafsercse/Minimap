@@ -11,7 +11,7 @@ namespace Minimap.Core.Interfaces
         int AddMarkerList(List<Marker> markerList);
         int DeleteMarker(Marker marker);
         int EditMarker(Marker marker);
-         /*List<Marker> GetAllMarkers();
+        /* List<Marker> GetAllMarkers();
         List<Marker> GetMyMarkers();*/
     }
 }

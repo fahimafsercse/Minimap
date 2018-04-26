@@ -8,9 +8,9 @@ namespace Minimap.Core.Interfaces
 {
     public interface IAccountDetailService
     {
-        int Add(AccountDetail accountDetail);
-        /*int Delete(string userName);
-        int Edit(AccountDetail accountDetail);
+        int AddAccount(AccountDetail accountDetail);
+        int DeleteAccount(string userName);
+        /*int Edit(AccountDetail accountDetail);
         List<AccountDetail> GetAllSortedByUserName();
         List<AccountDetail> GetAll();
 

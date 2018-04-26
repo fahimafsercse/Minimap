@@ -11,6 +11,8 @@ namespace Minimap.Core.Entities
         public static int AccountCounter { get; set; }
         public CurrentLocation CurrentLoc { get; set; }
 
+
+        
         public string Username { get; set; }
         public string Password { get; set; }
         public string FirstName { get; set; }
