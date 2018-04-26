@@ -1,5 +1,5 @@
 ﻿using Minimap.Core.Entities;
-using Minimap.Core.Service.Interfaces;
+using Minimap.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +24,7 @@ namespace Minimap.Core.Service
             return 1;
         }
 
-        public List<Channel> GetMyChannels()
+        /*public List<Channel> GetMyChannels()
         {
 
         }
@@ -37,6 +37,6 @@ namespace Minimap.Core.Service
         public List<Channel> GetSubscribedChannels()
         {
 
-        }
+        }*/
     }
 }

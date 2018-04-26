@@ -1,8 +1,0 @@
-Roboto-Black
-Roboto-Bold
-Roboto-Condensed
-Roboto-Italic
-Roboto-Light
-Roboto-Medium
-Roboto-Regular
-Roboto-Thin

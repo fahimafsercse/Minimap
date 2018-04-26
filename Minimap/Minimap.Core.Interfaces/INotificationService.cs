@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Minimap.Core.Service.Interfaces
+namespace Minimap.Core.Interfaces
 {
     public interface INotificationService
     {
@@ -12,7 +12,7 @@ namespace Minimap.Core.Service.Interfaces
          int DeleteNotification(Notification notification);
          int EditNotification(Notification notification);
          int GetNotificationNumber();//how many notifications assigned for a  morker
-         List<Notification> GetAllNotifications();
+         //List<Notification> GetAllNotifications();
 
     }
 }

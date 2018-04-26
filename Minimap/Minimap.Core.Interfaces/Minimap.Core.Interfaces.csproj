@@ -8,12 +8,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6AC6A66B-9D71-4814-962B-9A3FF3FE22AC}</ProjectGuid>
+    <ProjectGuid>{00A66C54-703E-42D0-8CCF-D0569CA0992F}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Minimap.Core.Entities</RootNamespace>
-    <AssemblyName>Minimap.Core.Entities</AssemblyName>
+    <RootNamespace>Minimap.Core.Interfaces</RootNamespace>
+    <AssemblyName>Minimap.Core.Interfaces</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -78,14 +78,21 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CurrentLocation.cs" />
-    <Compile Include="UserType.cs" />
-    <Compile Include="Notification.cs" />
-    <Compile Include="Marker.cs" />
-    <Compile Include="Channel.cs" />
-    <Compile Include="AccountDetail.cs" />
+    <Compile Include="IAccountDetailService.cs" />
+    <Compile Include="IChannelService.cs" />
+    <Compile Include="ICurrentLocation.cs" />
+    <Compile Include="IMarkerService.cs" />
+    <Compile Include="INotificationService.cs" />
+    <Compile Include="IUserTypeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Minimap.Core.Entities\Minimap.Core.Entities.csproj">
+      <Project>{6ac6a66b-9d71-4814-962b-9a3ff3fe22ac}</Project>
+      <Name>Minimap.Core.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -99,9 +106,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>51507</DevelopmentServerPort>
+          <DevelopmentServerPort>51521</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:51507/</IISUrl>
+          <IISUrl>http://localhost:51521/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

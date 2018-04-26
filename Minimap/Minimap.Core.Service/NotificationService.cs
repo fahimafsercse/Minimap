@@ -1,5 +1,5 @@
 ﻿using Minimap.Core.Entities;
-using Minimap.Core.Service.Interfaces;
+using Minimap.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,9 +25,9 @@ namespace Minimap.Core.Service
         {
             return 1;
         }
-        public List<Notification> GetAllNotifications()
+        /*public List<Notification> GetAllNotifications()
         {
             return;
-        }
+        }*/
     }
 }

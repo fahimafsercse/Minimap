@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Minimap.Core.Service.Interfaces
+namespace Minimap.Core.Interfaces
 {
     public interface IChannelService
     {
@@ -13,9 +13,9 @@ namespace Minimap.Core.Service.Interfaces
          int EditChannel(Channel channel);
 
 
-         List<Channel> GetMyChannels();
+         /*List<Channel> GetMyChannels();
          List<Channel> GetAllChannels();
-         List<Channel> GetSubscribedChannels();
+         List<Channel> GetSubscribedChannels();*/
 
 
     }

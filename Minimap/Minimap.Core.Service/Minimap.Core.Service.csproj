@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChannelService.cs" />
+    <Compile Include="DataService.cs" />
     <Compile Include="UserTypeService.cs" />
     <Compile Include="NotificationService.cs" />
     <Compile Include="MarkerService.cs" />
@@ -96,9 +97,9 @@
       <Project>{6ac6a66b-9d71-4814-962b-9a3ff3fe22ac}</Project>
       <Name>Minimap.Core.Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Minimap.Core.Interfaces\Minimap.Core.Service.Interfaces.csproj">
+    <ProjectReference Include="..\Minimap.Core.Interfaces\Minimap.Core.Interfaces.csproj">
       <Project>{00a66c54-703e-42d0-8ccf-d0569ca0992f}</Project>
-      <Name>Minimap.Core.Service.Interfaces</Name>
+      <Name>Minimap.Core.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
