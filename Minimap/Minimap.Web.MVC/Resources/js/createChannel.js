@@ -86,7 +86,6 @@ $(document).ready(function(){
     $(".list").append("<div class=cusDiv>Place Name : <input type=text class=textbox name=name[" + i + "] id=name[" + i + "] value=MyPlace />Latitude   :<input type=text name=lat[" + i + "] id=lat[" + i + "] value=" + $("#mapLat").text() + " readonly><br>Longitude  :<input type=text name=lng[" + i + "] id=lng[" + i + "] value=" + $("#mapLng").text() + " readonly><div class=textRight><a href=#> Remove </a></div></div>");
     //$(".list").append("<div class=cusDiv><p>Place Name : <input type=text class=textbox value=MyPlace></p><p>Location : "+$("#mapLat").text()+" , "+$("#mapLng").text()+"</p><div class=textRight><a href=#> Remove </a></div></div>");
     i++;
-   
     $(this).hide();
     closeWindow();
     
@@ -95,10 +94,7 @@ $(document).ready(function(){
          $(this).parent("div").parent("div").hide();
     });
     
-    });
-    $(document).on('click', '.sample', function (e) {
-        $(".list").append("<input type=hidden name=len value=" + i + ">");
-    });
+  });
 
   $("#clearList").click(function(){
     //markers div

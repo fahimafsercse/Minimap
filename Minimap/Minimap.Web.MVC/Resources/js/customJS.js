@@ -65,7 +65,7 @@ function DeleteMarkers()
 	markers = [];
 };
 
-function closeWindow()
+function closeWindow(List<Marker>)
 {
 	infowindowTmp.close(mapTmp, markerTmp);
 }

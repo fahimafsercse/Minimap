@@ -10,12 +10,17 @@ namespace Minimap.Core.Interfaces
     public interface IChannelService
     {
         void AddChannel(Channel channel, List<MarkerChannel> markerList);
-
-        void EditChannel(Channel channel, List<MarkerChannel> markers);
-        
+        void AddChannel(Channel channel);
+        void EditChannel(Channel channel, List<MarkerChannel> markers);     
         int DeleteChannelById(int Id);
-        void UnsubscribeChannel(int chId, int userId);
+        List<Channel> GetMyChannels(int id);
+        Channel GetChannel(int id);
+        List<MarkerChannel> GetChannelMarkers(int id);
+        void DeleteChannel(int id);
+        List<Channel> GetAllChannel();
         void SubscribeChannel(int channelId, int userid);
+        List<Subscription> GetSubList();
+        void UnsubscribeChannel(int chId, int userId);
 
         /*List<Channel> GetAllChannel();
         Channel GetChannelById(int Id);

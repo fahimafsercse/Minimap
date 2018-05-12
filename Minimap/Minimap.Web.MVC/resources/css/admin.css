@@ -1,0 +1,20 @@
+
+.titleCls{
+    padding : 10px;
+}
+.midPadding{
+    margin-top : -10px;   
+}
+.RedButton{
+    background: none;
+    color: red;
+    border-radius: 25px;
+}
+.RedButton:hover{
+    background: red;
+    color: white;
+}
+.bd{
+    border: 1px solid black;
+    color: red;
+}

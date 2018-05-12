@@ -19,7 +19,6 @@ namespace Minimap.Web.MVC.Controllers
         ChannelService channelService = new ChannelService();
         MarkerChannelService mChannelService = new MarkerChannelService();
 
-
         //Login
         public ActionResult Login()
         {
@@ -41,9 +40,9 @@ namespace Minimap.Web.MVC.Controllers
                 Session["Username"] = user.Username;
 
 
-                if (user.UserTypeId == 1)
+                if (user.UserTypeId == 3)
                 {
-                    return RedirectToAction("Dashboard", "User");
+                    return RedirectToAction("Dashboard", "Admin");
                 }
                 else
                 {
@@ -65,8 +64,6 @@ namespace Minimap.Web.MVC.Controllers
             Session["Username"] = null;
             return RedirectToAction("Login", "User");
         }
-
-
         //Homepage
         public ActionResult HomePage()
         {
@@ -76,8 +73,6 @@ namespace Minimap.Web.MVC.Controllers
             }
             return View();
         }
-
-
 
         public ActionResult Profile()
         {
@@ -137,7 +132,7 @@ namespace Minimap.Web.MVC.Controllers
         public ActionResult AddUser()
         {
             User user = new User();
-            user.UserTypeId = 2;
+            user.UserTypeId = 3;
             user.Username = Request.Form["Username"];
             user.FirstName = Request.Form["first_name"];
             user.LastName = Request.Form["last_name"];
@@ -168,7 +163,14 @@ namespace Minimap.Web.MVC.Controllers
 
 
         
-      
+        
+
+
+
+
+  
+
+  
         
 
         //markerService
@@ -180,7 +182,6 @@ namespace Minimap.Web.MVC.Controllers
             }
             return View();
         }
-
         public ActionResult AddMarkerList()
         {
             if (Session["Userid"] == null)
@@ -206,7 +207,6 @@ namespace Minimap.Web.MVC.Controllers
             return RedirectToAction("MyMarkerList","User");    
             //return View();
         }
-
         public ActionResult MyMarkerList()
         {
             if (Session["Userid"] == null)
@@ -251,7 +251,12 @@ namespace Minimap.Web.MVC.Controllers
             Marker marker = markerService.GetMarkerById(id);
             return View(marker);
         }
+
+
+
+
         //NOT WORKIN 
+
         [HttpGet]
         public ActionResult DeleteMarker(int id)
         {
@@ -266,36 +271,18 @@ namespace Minimap.Web.MVC.Controllers
 
 
 
-
-
-
-
         //usertype
         public ActionResult UserTypes()
         {
-            if (Session["Userid"] == null)
-            {
-                return RedirectToAction("Login", "User");
-            }
             return View(uTypeService.GetAllUserType());
         }
-
         public ActionResult AddUserTypes()
         {
-            if (Session["Userid"] == null)
-            {
-                return RedirectToAction("Login", "User");
-            }
             return View();
         }
-
         [HttpPost]
         public ActionResult AddUserTypes(UserType utype)
         {
-            if (Session["Userid"] == null)
-            {
-                return RedirectToAction("Login", "User");
-            }
             uTypeService.AddUserType(utype);
 
             return RedirectToAction("UserTypes", "User");
@@ -303,30 +290,18 @@ namespace Minimap.Web.MVC.Controllers
         [HttpGet]
         public ActionResult EditUserType(int id)
         {
-            if (Session["Userid"] == null)
-            {
-                return RedirectToAction("Login", "User");
-            }
             UserType uType = uTypeService.GetUserTypeById(id);
             return View(uType);
         }
         [HttpPost]
         public ActionResult EditUserType(UserType  uType)
         {
-            if (Session["Userid"] == null)
-            {
-                return RedirectToAction("Login", "User");
-            }
             uTypeService.EditUserType(uType);
             return RedirectToAction("UserTypes", "User");
         }
         [HttpGet]
         public ActionResult DeleteUserType(int id)
         {
-            if (Session["Userid"] == null)
-            {
-                return RedirectToAction("Login", "User");
-            }
             UserType uType = uTypeService.GetUserTypeById(id);
             return View(uType);          
         }
@@ -334,10 +309,6 @@ namespace Minimap.Web.MVC.Controllers
         [HttpPost]
         public ActionResult DeleteUserType(UserType uType)
         {
-            if (Session["Userid"] == null)
-            {
-                return RedirectToAction("Login", "User");
-            }
             uType.UserTypeName = Request.Form["typeName"];
             UserType u =  uTypeService.GetByUserTypeName(uType.UserTypeName);
             uTypeService.DeleteUserType(u);
@@ -346,15 +317,8 @@ namespace Minimap.Web.MVC.Controllers
         [HttpGet]
         public ActionResult UserTypeDetails(int id)
         {
-            if (Session["Userid"] == null)
-            {
-                return RedirectToAction("Login", "User");
-            }
             return View(uTypeService.GetUserTypeById(id));
         }
-
-
-
 
 
 
@@ -374,6 +338,8 @@ namespace Minimap.Web.MVC.Controllers
             {
                 return RedirectToAction("Login", "User");
             }
+            List<Channel> channelList = new List<Channel>();
+           
             List<MarkerChannel> markerList = new List<MarkerChannel>();
             MarkerChannel markerChannel = new MarkerChannel();
             Channel ch = new Channel();
@@ -382,11 +348,11 @@ namespace Minimap.Web.MVC.Controllers
             ch.CreationDate = DateTime.Today;
             ch.Status = false;
             ch.UserId = Convert.ToInt32(Session["Userid"]);
-            ch.UserId = Convert.ToInt32(Session["Userid"]);
+            
+            
 
             //rest are undone
-            int len = Convert.ToInt16(Request.Form["len"]);
-            ViewBag.len = len;/*
+            /*int len = Convert.ToInt16(Request.Form["len"]);
             for (int i = 0; i < len; i++)
             {
                 markerChannel = new MarkerChannel();
@@ -395,13 +361,15 @@ namespace Minimap.Web.MVC.Controllers
                 markerChannel.Longi = Convert.ToDouble(Request.Form["lng[" + i + "]"]);
                 markerChannel.UserId = Convert.ToInt32(Session["Userid"]);
                 markerList.Add(markerChannel);
-            }
-            ch.TotaMarker = len;
-            return View(markerList);
-            // channelService.AddChannel(ch,markerList);
-            //return RedirectToAction("MyMarkerList", "User");
-            */
-            return View();
+            }*/
+            //return View(markerList);
+            
+             channelService.AddChannel(ch);
+            channelList = channelService.GetAllChannel();
+
+            return RedirectToAction("MyChannel", "User",channelList);
+
+            //return View();
         }
         [HttpGet]
         public ActionResult ChannelDetails(int id)
@@ -439,6 +407,8 @@ namespace Minimap.Web.MVC.Controllers
             return View(channelService.GetAllChannel());
         }
 
+
+
         public ActionResult DeleteChannel(int id)
         {
             if (Session["Userid"] == null)
@@ -449,7 +419,6 @@ namespace Minimap.Web.MVC.Controllers
             return RedirectToAction("MyChannel", "User");
 
         }
-
         public ActionResult MyChannel()
         {
             if (Session["Userid"] == null)
@@ -458,10 +427,6 @@ namespace Minimap.Web.MVC.Controllers
             }
             return View(channelService.GetMyChannels(Convert.ToInt32(Session["Userid"])));
         }
-
-
-
-
 
 
         public ActionResult MySubscribes()
@@ -495,7 +460,7 @@ namespace Minimap.Web.MVC.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Unsubscribe(int  ch)
+        public ActionResult Unsubscribe(int?  ch)
         {
 
             ViewBag.chl = ch;

@@ -15,15 +15,19 @@ namespace Minimap.Core.Interfaces
         List<Marker> GetAllMarkers(int id);
         Marker GetMarkerById(int id);
         int DeleteMarkerById(int id);
-        /*List<Marker> GetMyMarkers(int id);
-        Marker GetMarkerById(int id);
-        List<Marker> GetAllMarkers();
+        //List<Marker> SearchMarkerByName(string txt);
+        //List<Marker> SearchMarkerById(string id);
 
-         
-        void DeleteMarkerById(int id);
-        void DeleteMarker(Marker marker);
 
-        List<Marker> SearchMarkerByName(string txt);*/
+        //List<Marker> GetMyMarkers(int myId);
+
+
+
+
+
+
+
+
 
 
     }

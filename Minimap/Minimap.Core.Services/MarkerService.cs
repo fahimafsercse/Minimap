@@ -15,6 +15,8 @@ namespace Minimap.Core.Services
         private DataContext context;
         public MarkerService() { this.context = new DataContext(); }
 
+
+
         public int  AddMarkerList(List<Marker> markerList)
         {           
             foreach(var marker in markerList)
@@ -58,16 +60,29 @@ namespace Minimap.Core.Services
             return Mymarkers;
         }
 
-
-        public Marker GetMarkerById(int markerid)
+        public Marker GetMarkerById(int id)
         {
-            return this.context.Markers.SingleOrDefault(d => d.MarkerId == markerid);
+            Marker marker = this.context.Markers.SingleOrDefault(d => d.MarkerId == id);
+            return marker;
         }
+
         public int DeleteMarkerById(int id)
         {
             Marker marker =  this.context.Markers.SingleOrDefault(d => d.MarkerId == id);
             this.context.Markers.Remove(marker);
             return this.context.SaveChanges();
+        }
+
+        List<Marker> SearchMarkerByName(string txt)
+        {
+            List<Marker> markers= new List<Marker>();
+            return markers;
+
+        }
+        List<Marker> SearchMarkerById(string id)
+        {
+            List<Marker> markers = new List<Marker>();
+            return markers;
         }
 
     }

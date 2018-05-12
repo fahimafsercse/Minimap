@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minimap.Web.MVC", "Minimap.Web.MVC\Minimap.Web.MVC.csproj", "{70913283-EF2C-4D29-9757-54D84449AAC1}"
 EndProject
@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{DE5A2D6C-1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minimap.Infrastructure", "Minimap.Infrastructure\Minimap.Infrastructure.csproj", "{3B3F35A6-488F-4212-88CC-E176A71E7553}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{8266BA07-1388-435E-B80B-8A852BAE35C4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{C9E229A0-F163-4272-BD09-56AC47673341}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,7 +54,7 @@ Global
 		{D108D1B4-A0ED-4F46-9BA3-3AA9148443AD} = {DE5A2D6C-19A1-4A61-88AF-0CE2958B12A0}
 		{97862447-77C1-4F47-AF79-62ED428E5BA1} = {DE5A2D6C-19A1-4A61-88AF-0CE2958B12A0}
 		{0AD40821-6385-4A3A-A111-E0A0554752EC} = {DE5A2D6C-19A1-4A61-88AF-0CE2958B12A0}
-		{3B3F35A6-488F-4212-88CC-E176A71E7553} = {8266BA07-1388-435E-B80B-8A852BAE35C4}
+		{3B3F35A6-488F-4212-88CC-E176A71E7553} = {C9E229A0-F163-4272-BD09-56AC47673341}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1FB3C35B-3741-4A4B-B49F-33DE1F35D91A}

@@ -13,21 +13,22 @@ namespace Minimap.Core.Services
         private DataContext context;
         public NotificationService() { this.context = new DataContext(); }
 
-        /*void AddNotification(string txt)
+        public void AddNotification(string txt)
         {
 
         }
-        void EditNotification(int Id)
+        public void EditNotification(int Id)
         {
 
         }
-        void DeleteNotificationById(int Id)
+        public void DeleteNotificationById(int Id)
         {
 
         }
-        Notification GetNotificationById(int Id)
+        public Notification GetNotificationById(int Id)
         {
-
-        }*/
+            Notification not = new Notification();
+            return not;
+        }
     }
 }

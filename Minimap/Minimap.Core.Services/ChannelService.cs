@@ -14,7 +14,12 @@ namespace Minimap.Core.Services
         public ChannelService() { this.context = new DataContext(); }
 
 
-
+        public void AddChannel(Channel channel)
+        {
+            //this.context.Database.SqlQuery("");
+            this.context.Channels.Add(channel);
+            this.context.SaveChanges();
+        }
 
         public void AddChannel(Channel channel, List<MarkerChannel> markerList)
         {

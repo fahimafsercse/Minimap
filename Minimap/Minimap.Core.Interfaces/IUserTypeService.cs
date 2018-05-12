@@ -13,11 +13,13 @@ namespace Minimap.Core.Interfaces
 
 
         int DeleteUserType(int id);
+        int DeleteUserType(UserType uType);
 
         int EditUserType(UserType utype);
 
 
         List<UserType> GetAllUserType();
+        UserType GetUserTypeById(int id);
 
         UserType GetByUserTypeName(string txt);
         

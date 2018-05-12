@@ -9,9 +9,9 @@ namespace Minimap.Core.Interfaces
 {
     public interface INotificationService
     {
-        /*void AddNotification(string txt);
+        void AddNotification(string txt);
         void EditNotification(int Id);
         void DeleteNotificationById(int Id);
-        Notification GetNotificationById(int Id);*/
+        Notification GetNotificationById(int Id);
     }
 }
