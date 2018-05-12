@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Minimap.Core.Entities.UserType>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UserTypes</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "AddUserTypes")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserTypeName)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserTypeName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EditUserType", new { id=item.UserTypeId }) |
+                @Html.ActionLink("Details", "UserTypeDetails", new { id=item.UserTypeId }) |
+                @Html.ActionLink("Delete", "DeleteUserType", new { id=item.UserTypeId })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

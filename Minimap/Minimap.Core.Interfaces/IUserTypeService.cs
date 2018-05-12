@@ -2,16 +2,24 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Minimap.Core.Interfaces
 {
     public interface IUserTypeService
     {
-        int Add(UserType userType);
-        int Edit(UserType userType);
-        //List<UserType> GetAll();
-        int Remove(string id);
+        int AddUserType(UserType usertype);
+
+
+        int DeleteUserType(int id);
+
+        int EditUserType(UserType utype);
+
+
+        List<UserType> GetAllUserType();
+
+        UserType GetByUserTypeName(string txt);
         
     }
 }

@@ -1,6 +1,6 @@
-﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
-  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -8,12 +8,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{EECB438A-CB39-41AD-A6DE-A9D37F778D2B}</ProjectGuid>
+    <ProjectGuid>{70913283-EF2C-4D29-9757-54D84449AAC1}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Minimap.Web.Mvc</RootNamespace>
-    <AssemblyName>Minimap.Web.Mvc</AssemblyName>
+    <RootNamespace>Minimap.Web.MVC</RootNamespace>
+    <AssemblyName>Minimap.Web.MVC</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -24,9 +24,6 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-  </PropertyGroup>
-  <PropertyGroup>
-    <PackageTargetFallback>netstandard2.0</PackageTargetFallback>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,8 +44,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
@@ -67,18 +70,6 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="Unity.Abstractions, Version=3.3.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
-      <HintPath>..\packages\Unity.Abstractions.3.3.0\lib\net45\Unity.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Container, Version=5.7.0.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
-      <HintPath>..\packages\Unity.Container.5.7.0\lib\net46\Unity.Container.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mvc, Version=5.0.13.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
-      <HintPath>..\packages\Unity.Mvc.5.0.13\lib\net46\Unity.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
-      <HintPath>..\packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web.Razor">
@@ -105,32 +96,182 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Resources\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Resources\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Resources\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Resources\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Resources\bootstrap\css\bootstrap.css" />
+    <Content Include="Resources\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Resources\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Resources\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Resources\bootstrap\js\bootstrap.js" />
+    <Content Include="Resources\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Resources\css\main.css" />
+    <Content Include="Resources\css\map.png" />
+    <Content Include="Resources\css\map2.png" />
+    <Content Include="Resources\css\reg.css" />
+    <Content Include="Resources\FontAwesome\LICENSE.txt" />
+    <Content Include="Resources\FontAwesome\svg-with-js\css\fa-svg-with-js.css" />
+    <Content Include="Resources\FontAwesome\svg-with-js\js\fa-brands.js" />
+    <Content Include="Resources\FontAwesome\svg-with-js\js\fa-brands.min.js" />
+    <Content Include="Resources\FontAwesome\svg-with-js\js\fa-regular.js" />
+    <Content Include="Resources\FontAwesome\svg-with-js\js\fa-regular.min.js" />
+    <Content Include="Resources\FontAwesome\svg-with-js\js\fa-solid.js" />
+    <Content Include="Resources\FontAwesome\svg-with-js\js\fa-solid.min.js" />
+    <Content Include="Resources\FontAwesome\svg-with-js\js\fa-v4-shims.js" />
+    <Content Include="Resources\FontAwesome\svg-with-js\js\fa-v4-shims.min.js" />
+    <Content Include="Resources\FontAwesome\svg-with-js\js\fontawesome-all.js" />
+    <Content Include="Resources\FontAwesome\svg-with-js\js\fontawesome-all.min.js" />
+    <Content Include="Resources\FontAwesome\svg-with-js\js\fontawesome.js" />
+    <Content Include="Resources\FontAwesome\svg-with-js\js\fontawesome.min.js" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\css\fa-brands.css" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\css\fa-brands.min.css" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\css\fa-regular.css" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\css\fa-regular.min.css" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\css\fa-solid.css" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\css\fa-solid.min.css" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\css\fontawesome-all.css" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\css\fontawesome-all.min.css" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\css\fontawesome.css" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\css\fontawesome.min.css" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\webfonts\fa-brands-400.svg" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\webfonts\fa-regular-400.svg" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\webfonts\fa-solid-900.svg" />
+    <Content Include="Resources\font\roboto\list.txt" />
+    <Content Include="Resources\font\roboto\NOTICE.txt" />
+    <Content Include="Resources\image\login.png" />
+    <Content Include="Resources\image\map2.png" />
+    <Content Include="Resources\image\user.jpg" />
+    <Content Include="Resources\js\createChannel.js" />
+    <Content Include="Resources\js\customJS.js" />
+    <Content Include="Resources\js\jquery.js" />
+    <Content Include="Resources\js\markerDetails.js" />
+    <Content Include="Resources\js\myMarkerList.js" />
+    <Content Include="Resources\js\popper.min.js" />
+    <Content Include="Resources\materialize\css\materialize.css" />
+    <Content Include="Resources\materialize\css\materialize.min.css" />
+    <Content Include="Resources\materialize\js\materialize.js" />
+    <Content Include="Resources\materialize\js\materialize.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\UnityConfig.cs" />
-    <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="Controllers\AdminController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Resources\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Resources\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Resources\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Resources\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Resources\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Resources\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Resources\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Resources\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Resources\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Resources\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Resources\font\roboto\Roboto-Black.ttf" />
+    <Content Include="Resources\font\roboto\Roboto-BlackItalic.ttf" />
+    <Content Include="Resources\font\roboto\Roboto-Bold.ttf" />
+    <Content Include="Resources\font\roboto\Roboto-BoldCondensed.ttf" />
+    <Content Include="Resources\font\roboto\Roboto-BoldCondensedItalic.ttf" />
+    <Content Include="Resources\font\roboto\Roboto-BoldItalic.ttf" />
+    <Content Include="Resources\font\roboto\Roboto-Condensed.ttf" />
+    <Content Include="Resources\font\roboto\Roboto-CondensedItalic.ttf" />
+    <Content Include="Resources\font\roboto\Roboto-Italic.ttf" />
+    <Content Include="Resources\font\roboto\Roboto-Light.ttf" />
+    <Content Include="Resources\font\roboto\Roboto-LightItalic.ttf" />
+    <Content Include="Resources\font\roboto\Roboto-Medium.ttf" />
+    <Content Include="Resources\font\roboto\Roboto-MediumItalic.ttf" />
+    <Content Include="Resources\font\roboto\Roboto-Regular.ttf" />
+    <Content Include="Resources\font\roboto\Roboto-Thin.ttf" />
+    <Content Include="Resources\font\roboto\Roboto-ThinItalic.ttf" />
+    <Content Include="Resources\font\roboto\Roboto_Specimen_Book.pdf" />
+    <Content Include="Resources\font\trashhand\TrashHand.TTF" />
+    <Content Include="Resources\image\asdsdsdasda.ai" />
+    <Content Include="Resources\materialize\LICENSE" />
+    <Content Include="Resources\materialize\README.md" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
+    <Content Include="Views\User\VerifyLogin.cshtml" />
+    <Content Include="Views\User\Registration.cshtml" />
+    <Content Include="Views\User\AddUser.cshtml" />
+    <Content Include="Views\User\AddMarker.cshtml" />
+    <Content Include="Views\User\MyMarkerList.cshtml" />
+    <Content Include="Views\User\MarkerDetails.cshtml" />
+    <Content Include="Views\User\HomePage.cshtml" />
+    <Content Include="Views\Admin\Dashboard.cshtml" />
+    <Content Include="Resources\FontAwesome\README.md" />
+    <Content Include="Resources\FontAwesome\use-on-desktop\Font Awesome 5 Brands-Regular-400.otf" />
+    <Content Include="Resources\FontAwesome\use-on-desktop\Font Awesome 5 Free-Regular-400.otf" />
+    <Content Include="Resources\FontAwesome\use-on-desktop\Font Awesome 5 Free-Solid-900.otf" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\less\fa-brands.less" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\less\fa-regular.less" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\less\fa-solid.less" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\less\fontawesome.less" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\less\_animated.less" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\less\_bordered-pulled.less" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\less\_core.less" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\less\_fixed-width.less" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\less\_icons.less" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\less\_larger.less" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\less\_list.less" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\less\_mixins.less" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\less\_rotated-flipped.less" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\less\_screen-reader.less" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\less\_stacked.less" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\less\_variables.less" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\webfonts\fa-brands-400.eot" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\webfonts\fa-brands-400.ttf" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\webfonts\fa-brands-400.woff" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\webfonts\fa-brands-400.woff2" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\webfonts\fa-regular-400.eot" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\webfonts\fa-regular-400.ttf" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\webfonts\fa-regular-400.woff" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\webfonts\fa-regular-400.woff2" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\webfonts\fa-solid-900.eot" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\webfonts\fa-solid-900.ttf" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\webfonts\fa-solid-900.woff" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\webfonts\fa-solid-900.woff2" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\scss\fa-brands.scss" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\scss\fa-regular.scss" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\scss\fa-solid.scss" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\scss\fontawesome.scss" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\scss\_animated.scss" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\scss\_bordered-pulled.scss" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\scss\_core.scss" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\scss\_fixed-width.scss" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\scss\_icons.scss" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\scss\_larger.scss" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\scss\_list.scss" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\scss\_mixins.scss" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\scss\_rotated-flipped.scss" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\scss\_screen-reader.scss" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\scss\_stacked.scss" />
+    <Content Include="Resources\FontAwesome\web-fonts-with-css\scss\_variables.scss" />
+    <Content Include="Views\User\Profile.cshtml" />
+    <Content Include="Views\User\UserTypes.cshtml" />
+    <Content Include="Views\User\AddUserTypes.cshtml" />
+    <Content Include="Views\User\Markers.cshtml" />
+    <Content Include="Views\User\TempManageMarkers.cshtml" />
+    <Content Include="Views\User\CreateChannel.cshtml" />
+    <Content Include="Views\User\ExploreChannel.cshtml" />
+    <Content Include="Views\User\AddMarkerList.cshtml" />
+    <Content Include="Views\User\ChannelDetails.cshtml" />
+    <Content Include="Views\User\DeleteUserType.cshtml" />
+    <Content Include="Views\User\UserTypeDetails.cshtml" />
+    <Content Include="Views\User\EditUserType.cshtml" />
+    <Content Include="Views\User\EditProfile.cshtml" />
+    <Content Include="Views\User\MyChannel.cshtml" />
+    <Content Include="Views\User\MySubscribes.cshtml" />
+    <Content Include="Views\User\Unsubscribe.cshtml" />
+    <Content Include="Views\User\AddChannelList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -141,25 +282,20 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Admin\" />
-    <Folder Include="Views\Client\" />
+    <Folder Include="Resources\materialize\fonts\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Minimap.Core.Entities\Minimap.Core.Entities.csproj">
-      <Project>{6ac6a66b-9d71-4814-962b-9a3ff3fe22ac}</Project>
+      <Project>{d108d1b4-a0ed-4f46-9ba3-3aa9148443ad}</Project>
       <Name>Minimap.Core.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\Minimap.Core.Interfaces\Minimap.Core.Interfaces.csproj">
-      <Project>{00a66c54-703e-42d0-8ccf-d0569ca0992f}</Project>
+      <Project>{97862447-77c1-4f47-af79-62ed428e5ba1}</Project>
       <Name>Minimap.Core.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Minimap.Core.Service\Minimap.Core.Service.csproj">
-      <Project>{a045ae44-ded0-44b8-8c90-86be3d8fd2c6}</Project>
-      <Name>Minimap.Core.Service</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Minimap.Infrastructure\Minimap.Infrastructure.csproj">
-      <Project>{724e17e5-680e-495e-b18b-a86d17613c95}</Project>
-      <Name>Minimap.Infrastructure</Name>
+    <ProjectReference Include="..\Minimap.Core.Services\Minimap.Core.Services.csproj">
+      <Project>{0ad40821-6385-4a3a-a111-e0a0554752ec}</Project>
+      <Name>Minimap.Core.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
@@ -175,9 +311,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>51504</DevelopmentServerPort>
+          <DevelopmentServerPort>1805</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:51504/</IISUrl>
+          <IISUrl>http://localhost:1805/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -191,11 +327,9 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
-    <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
-  <Import Project="..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

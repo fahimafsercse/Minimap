@@ -1,0 +1,82 @@
+﻿@model Minimap.Core.Entities.Marker
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Markers</title>
+</head>
+<body>
+    <div>
+        <h4>Marker</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.MarkerName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MarkerName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Lat)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Lat)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Longi)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Longi)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.CreationDate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CreationDate)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MarkerDescription)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MarkerDescription)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ChannelId)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ChannelId)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.UserId)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.UserId)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.MarkerId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

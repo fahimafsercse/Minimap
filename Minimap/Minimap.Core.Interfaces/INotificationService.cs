@@ -2,17 +2,16 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Minimap.Core.Interfaces
 {
     public interface INotificationService
     {
-         int AddNotification(Notification notification);
-         int DeleteNotification(Notification notification);
-         int EditNotification(Notification notification);
-         int GetNotificationNumber();//how many notifications assigned for a  morker
-         //List<Notification> GetAllNotifications();
-
+        /*void AddNotification(string txt);
+        void EditNotification(int Id);
+        void DeleteNotificationById(int Id);
+        Notification GetNotificationById(int Id);*/
     }
 }

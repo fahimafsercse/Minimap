@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -7,8 +8,9 @@ namespace Minimap.Core.Entities
 {
     public class UserType
     {
-        public string UserTypeId { get { return this.UserTypeId; } }
-        public string UserTypeName { set { this.UserTypeName = value; } get { return this.UserTypeName; } }
-
+        [Required,Key]
+        public int UserTypeId { get; set; }
+        [Required]
+        public string UserTypeName { get; set; }
     }
 }

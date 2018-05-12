@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Minimap.Web.Mvc")]
+[assembly: AssemblyTitle("Minimap.Web.MVC")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Minimap.Web.Mvc")]
+[assembly: AssemblyProduct("Minimap.Web.MVC")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("eecb438a-cb39-41ad-a6de-a9d37f778d2b")]
+[assembly: Guid("70913283-ef2c-4d29-9757-54d84449aac1")]
 
 // Version information for an assembly consists of the following four values:
 //

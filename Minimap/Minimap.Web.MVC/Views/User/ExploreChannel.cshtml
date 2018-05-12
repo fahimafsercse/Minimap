@@ -1,0 +1,226 @@
+﻿@model IEnumerable<Minimap.Core.Entities.Channel>
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <!-- Linking Custom CSS -->
+    <link href="~/Resources/css/main.css" rel="stylesheet" />
+
+    <!-- Linking Bootstrap  -->
+    <link href="~/Resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap for Javascript -->
+    <script src="~/Resources/js/jquery.js"></script>
+    <script src="~/Resources/js/popper.min.js"></script>
+    <script src="~/Resources/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Google Map API -->
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5aWDUor0l1wYnXeYFv0_fuOVhVPyhobU&callback=initMap">
+    </script>
+    <!-- Add Google Map -->
+    <script>
+        function initMap() {
+            var uluru = { lat: 23.874758, lng: 90.382677 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 17,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+</head>
+
+
+
+<body>
+    <!-- Navigation Bar -->
+    <div id="topNav">
+        <div class="container-fluid">
+            <div class="navbar row">
+
+                <div class="col-md-2 ">
+                    <a href="HomePage">
+                        <center>
+                            <font size="5" color="white">
+                                <i class="fas fa-map-marker-alt"></i> MiniMap
+                            </font>
+                        </center>
+                    </a>
+                </div>
+
+                <div class="col-md-6 ">
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control-lg" placeholder="Search . . . ">
+                        <div class="input-group-append">
+                            <button class="btn btn-default" type="Submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 col-6 ">
+                    <button type="button" class="btn btn-sm float-right" id="red">
+                        Notifications <span class="badge badge-light">4</span>
+                    </button>
+
+                </div>
+                <div class="col-md-1 col-6">
+                    <a href="Profile">
+                        <font color="white" size="5"><i class="fas fa-user-circle"></i></font>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- DropDown -->
+            <div class="col-md-2">
+
+                <center>
+
+                    <a href="HomePage">
+                        <button class="btn ddm" type="button">
+                            <font size="3"><i class="far fa-map"></i> &emsp;Map</font>
+                        </button>
+                    </a>
+
+                    <!-- Marker -->
+                    <div class="dropdown dropright">
+
+                        <button class="btn ddm dropdown-toggle" type="button" data-toggle="dropdown">
+                            <font size="3"><i class="fas fa-thumbtack"></i> &emsp;Marker</font>
+                        </button>
+
+                        <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                            <a href="AddMarker"><li class="dropdown-item">Add Marker<i class="fas fa-plus-circle"></i></li></a>
+                            <a href="MyMarkerList"><li class="dropdown-item">My Markers<i class="fas fa-plus-circle"></i></li></a>
+                        </ul>
+                    </div>
+
+                    <!-- Channel -->
+                    <div class="dropdown dropright">
+                        <button class="btn ddm dropdown-toggle" type="button" data-toggle="dropdown">
+                            <font size="3"><i class="fas fa-compass"></i>&emsp; Channel</font>
+                        </button>
+                        <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                            <li class="dropdown-item"><a href="CreateChannel">Create New Channel<i class="fas fa-search-plus"></i></a></li>
+                            <li class="dropdown-item"><a href="MyChannel">My Channels<i class="fas fa-search-plus"></i></a></li>
+                            <li class="dropdown-item"><a href="ExploreChannel">Explore New Channel<i class="fas fa-search-plus"></i></a></li>
+                            <li class="dropdown-item"><a href="MySubscribes">My Subscribes<i class="fas fa-search-plus"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Settings -->
+                    <div class="dropdown dropright">
+                        <button class="btn ddm dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <font size="3"><i class="fas fa-cogs"></i>&emsp; Settings</font>
+                        </button>
+                        <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                            <li class="dropdown-item"><a href="Profile">My Account<i class="fas fa-user-circle"></i></a></li>
+                            <li class="dropdown-item"><a href="#">Help<i class="fas fa-question-circle"></i></a></li>
+                            <li class="dropdown-item"><a href="#">Contact<i class="fas fa-envelope"></i></a></li>
+                            <li class="dropdown-item"><a href="#">About<i class="fas fa-info-circle"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <a href="Login">
+                        <button class="btn ddm" type="button">
+                            <font size="3"><i class="fas fa-sign-out-alt"></i></font>
+                        </button>
+                    </a>
+                </center>
+            </div>
+
+
+            <!-- Middle Div -->
+            <div class="col-md-10 col-12" id="myPad">
+
+                <div class="row" style="color:red;margin:20px">
+                    <div class="col-md-12 col-12">
+                        <h1>Explore New Channel</h1>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-12">
+                            @foreach (var element in Model) {
+                        <a href="ChannelDetails/@Html.DisplayFor(m => element.ChannelId)">
+                            <div class="customDiv card" id="exCard">
+                                <h4>@Html.DisplayFor(m => element.ChannelName)</h4>
+                                <div class="row" style="padding: 5px;">
+                                    <div class="col-md-4 ">
+                                        Total Marker : <b>@Html.DisplayFor(m => element.TotaMarker)</b>
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        Total Views : <b>@Html.DisplayFor(m => element.TotalView)</b>
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        Rating :
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+
+                                <div class="row" style="padding: 5px">
+                                    <div class="col-md-4 ">
+                                        Subscribed By User: <b>@Html.DisplayFor(m => element.TotalSubscriber)</b>
+                                    </div>
+                                    <div class="col-md-4">
+                                        Created By :
+                                        <font><b>@Html.DisplayFor(m => element.UserId)</b></font>
+                                    </div>
+                                    <div class="col-md-4">
+
+                                        <a href="Subscribe/@Html.DisplayFor(m=> element.ChannelId)">
+                                            <button class="btn btn-light" type="button">
+                                                Subscribe <i class="fas fa-trash"></i>
+                                            </button>
+                                        </a>                                     
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                            }
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
